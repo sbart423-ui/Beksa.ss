@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Никита — Портфолио</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!-- Font Awesome для иконок соцсетей -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  body { font-family: 'Roboto', sans-serif; margin:0; padding:0; scroll-behavior: smooth; background:#f5f5f5; color:#333; }
+  a { text-decoration:none; color:inherit; }
+  header { position: sticky; top:0; background:#2c3e50; color:white; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; z-index:1000; }
+  header h1 { margin:0; font-size:1.5rem; }
+  nav a { color:white; margin:0 10px; font-weight:700; transition:color 0.3s; }
+  nav a:hover { color:#3498db; }
+  .btn { display:inline-block; padding:12px 24px; margin-top:10px; background:#3498db; color:white; border-radius:5px; font-weight:700; transition:all 0.3s; }
+  .btn:hover { background:#2980b9; transform:scale(1.05); }
+  /* Hero с параллаксом */
+  .hero { position:relative; height:100vh; background:linear-gradient(135deg, #3498db, #2980b9); display:flex; flex-direction:column; justify-content:center; align-items:center; color:white; text-align:center; overflow:hidden; }
+  .hero::before { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:url('https://via.placeholder.com/1920x1080') center/cover no-repeat; opacity:0.3; z-index:0; transform:translateY(0); transition:transform 0.5s; }
+  .hero-content { position:relative; z-index:1; opacity:0; transform:translateY(50px); transition:all 1s ease; }
+  .hero h1 { font-size:3rem; margin-bottom:20px; }
+  .hero p { font-size:1.3rem; margin-bottom:20px; }
+  section { padding:60px 20px; max-width:1000px; margin:auto; opacity:0; transform:translateY(50px); transition:all 1s ease; }
+  h2 { text-align:center; margin-bottom:30px; }
+  .services, .portfolio, .contact { background:white; margin-bottom:20px; border-radius:8px; box-shadow:0 0 15px rgba(0,0,0,0.1); padding:40px 20px; }
+  .service-item, .portfolio-item { padding:20px; border-bottom:1px solid #eee; transition:transform 0.3s, box-shadow 0.3s; }
+  .service-item:last-child, .portfolio-item:last-child { border-bottom:none; }
+  .service-item:hover, .portfolio-item:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.15); }
+  .portfolio-slider { display:flex; overflow:hidden; position:relative; }
+  .portfolio-track { display:flex; transition:transform 0.5s ease; }
+  .portfolio-slide { min-width:100%; padding:10px; box-sizing:border-box; }
+  .portfolio-slide img { width:100%; border-radius:6px; }
+  .social-icons { text-align:center; margin-top:20px; }
+  .social-icons a { margin:0 10px; font-size:1.5rem; color:#3498db; transition:all 0.3s; }
+  .social-icons a:hover { color:#2980b9; transform:scale(1.2); }
+  footer { text-align:center; padding:20px; background:#2c3e50; color:white; }
+  @media(max-width:600px) { nav a { display:block; margin:10px 0; } .hero h1{ font-size:2rem; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Никита</h1>
+  <nav>
+    <a href="#about">Обо мне</a>
+    <a href="#services">Услуги</a>
+    <a href="#portfolio">Портфолио</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+</header>
+
+<section class="hero" id="about">
+  <div class="hero-content">
+    <h1>Привет! Я Никита</h1>
+    <p>Создаю современные сайты и дизайн. Здесь вы можете увидеть мои работы и услуги.</p>
+    <a href="#contact" class="btn">Заказать</a>
+    <div class="social-icons">
+      <a href="https://t.me/jeeep69" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="mailto:teresenkonikita26@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <h2>Мои услуги</h2>
+  <div class="service-item">
+    <h3>Создание сайтов</h3>
+    <p>Адаптивные и современные сайты для бизнеса и личных проектов.</p>
+    <a href="#contact" class="btn">Заказать</a>
+  </div>
+  <div class="service-item">
+    <h3>Дизайн интерфейсов</h3>
+    <p>Красивые и удобные интерфейсы для веб и мобильных приложений.</p>
+    <a href="#contact" class="btn">Заказать</a>
+  </div>
+  <div class="service-item">
+    <h3>Поддержка сайтов</h3>
+    <p>Обновление и сопровождение сайтов, оптимизация и улучшение производительности.</p>
+    <a href="#contact" class="btn">Заказать</a>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <h2>Портфолио</h2>
+  <div class="portfolio-slider">
+    <div class="portfolio-track">
+      <div class="portfolio-slide">
+        <h3>Проект 1</h3>
+        <img src="https://via.placeholder.com/800x400" alt="Пример работы 1">
+      </div>
+      <div class="portfolio-slide">
+        <h3>Проект 2</h3>
+        <img src="https://via.placeholder.com/800x400" alt="Пример работы 2">
+      </div>
+      <div class="portfolio-slide">
+        <h3>Проект 3</h3>
+        <img src="https://via.placeholder.com/800x400" alt="Пример работы 3">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Связаться со мной</h2>
+  <p>Email: <a href="mailto:teresenkonikita26@gmail.com">teresenkonikita26@gmail.com</a></p>
+  <p>Телеграм: <a href="https://t.me/jeeep69" target="_blank">@jeeep69</a></p>
+  <p>WhatsApp: +380XXXXXXXXX</p>
+  <a href="mailto:teresenkonikita26@gmail.com" class="btn">Написать</a>
+</section>
+
+<footer>
+  &copy; 2026 Никита. Все права защищены.
+</footer>
+
+<script>
+  // Параллакс hero
+  const heroBg = document.querySelector('.hero::before');
+  window.addEventListener('scroll', () => {
+    const scroll = window.scrollY;
+    document.querySelector('.hero::before').style.transform = 'translateY(' + scroll*0.3 + 'px)';
+  });
+
+  // Слайдер портфолио
+  const track = document.querySelector('.portfolio-track');
+  const slides = Array.from(track.children);
+  let currentIndex = 0;
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    track.style.transform = 'translateX(-' + currentIndex*100 + '%)';
+  }
+  setInterval(nextSlide, 4000);
+
+  // Анимация появления секций
+  const animateElements = document.querySelectorAll('.hero-content, section');
+  function checkPosition() {
+    const windowHeight = window.innerHeight;
+    animateElements.forEach(el => {
+      const posFromTop = el.getBoundingClientRect().top;
+      if(posFromTop < windowHeight - 100) {
+        el.style.opacity = 1;
+        el.style.transform = 'translateY(0)';
+      }
+    });
+  }
+  window.addEventListener('scroll', checkPosition);
+  window.addEventListener('load', checkPosition);
+</script>
+
+</body>
+</html>
